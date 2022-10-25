@@ -1,12 +1,10 @@
 ﻿using System;
-namespace GrowthHubAPI.Models
-{
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("Subjects")]
-    public class Subject
+namespace GrowthHubAPI.Dtos.Subject
+{
+    public class GetSubjectDto
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -16,7 +14,6 @@ namespace GrowthHubAPI.Models
 
         public string IconURL { get; set; } = String.Empty;
 
-      
         //public List<string>? ResourceLink { get; set; }
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using GrowthHubAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GrowthHubAPI.Context
 {
@@ -13,7 +14,9 @@ namespace GrowthHubAPI.Context
             : base(options)
         {
         }
-        public DbSet<Subject>? Subjects { get; set; }
+        //public DbSet<Subject>? Subjects { get; set; }
+        //public DbSet<Resource> Resources { get; set; }
+        public DbSet<Subject> Subjects => Set<Subject>();
+        public DbSet<Resource> Resources => Set<Resource>();
     }
 }
-
